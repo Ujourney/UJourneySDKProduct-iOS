@@ -1,0 +1,1882 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UJService",
+        "printedName": "UJService",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "activate",
+            "printedName": "activate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@UJourneySDK@objc(pl)UJService(im)activate:",
+            "mangledName": "$s11UJourneySDK9UJServiceP8activateyySSF",
+            "moduleName": "UJourneySDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : UJourneySDK.UJService>",
+            "sugared_genericSig": "<Self where Self : UJourneySDK.UJService>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "report",
+            "printedName": "report(_:needAsset:params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UJInAppEvent",
+                "printedName": "UJourneySDK.UJInAppEvent",
+                "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@UJourneySDK@objc(pl)UJService(im)report:needAsset:params:",
+            "mangledName": "$s11UJourneySDK9UJServiceP6report_9needAsset6paramsyAA12UJInAppEventO_SbSDyS2SGtF",
+            "moduleName": "UJourneySDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : UJourneySDK.UJService>",
+            "sugared_genericSig": "<Self where Self : UJourneySDK.UJService>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enableTestMode",
+            "printedName": "enableTestMode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@UJourneySDK@objc(pl)UJService(im)enableTestMode:",
+            "mangledName": "$s11UJourneySDK9UJServiceP14enableTestModeyySbF",
+            "moduleName": "UJourneySDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : UJourneySDK.UJService>",
+            "sugared_genericSig": "<Self where Self : UJourneySDK.UJService>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@UJourneySDK@objc(pl)UJService",
+        "mangledName": "$s11UJourneySDK9UJServiceP",
+        "moduleName": "UJourneySDK",
+        "genericSig": "<τ_0_0 : ObjectiveC.NSObjectProtocol>",
+        "sugared_genericSig": "<Self : ObjectiveC.NSObjectProtocol>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UJSDK",
+        "printedName": "UJSDK",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UJSDK",
+                "printedName": "UJourneySDK.UJSDK",
+                "usr": "c:@M@UJourneySDK@objc(cs)UJSDK"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(cpy)shared",
+            "mangledName": "$s11UJourneySDK5UJSDKC6sharedACvpZ",
+            "moduleName": "UJourneySDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJSDK",
+                    "printedName": "UJourneySDK.UJSDK",
+                    "usr": "c:@M@UJourneySDK@objc(cs)UJSDK"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(cm)shared",
+                "mangledName": "$s11UJourneySDK5UJSDKC6sharedACvgZ",
+                "moduleName": "UJourneySDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "activate",
+            "printedName": "activate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(im)activate:",
+            "mangledName": "$s11UJourneySDK5UJSDKC8activateyySSF",
+            "moduleName": "UJourneySDK",
+            "objc_name": "activate:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "report",
+            "printedName": "report(_:needAsset:params:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UJInAppEvent",
+                "printedName": "UJourneySDK.UJInAppEvent",
+                "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(im)report:needAsset:params:",
+            "mangledName": "$s11UJourneySDK5UJSDKC6report_9needAsset6paramsyAA12UJInAppEventO_SbSDyS2SGtF",
+            "moduleName": "UJourneySDK",
+            "objc_name": "report:needAsset:params:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enableTestMode",
+            "printedName": "enableTestMode(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(im)enableTestMode:",
+            "mangledName": "$s11UJourneySDK5UJSDKC14enableTestModeyySbF",
+            "moduleName": "UJourneySDK",
+            "objc_name": "enableTestMode:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@UJourneySDK@objc(cs)UJSDK",
+        "mangledName": "$s11UJourneySDK5UJSDKC",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "UJService",
+            "printedName": "UJService",
+            "usr": "c:@M@UJourneySDK@objc(pl)UJService",
+            "mangledName": "$s11UJourneySDK9UJServiceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UJInAppEvent",
+        "printedName": "UJInAppEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "INSTALL",
+            "printedName": "INSTALL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventINSTALL",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO7INSTALLyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "ADD_PAYMENT_INFO",
+            "printedName": "ADD_PAYMENT_INFO",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventADD_PAYMENT_INFO",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO16ADD_PAYMENT_INFOyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "COMPLETE_REGISTRATION",
+            "printedName": "COMPLETE_REGISTRATION",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventCOMPLETE_REGISTRATION",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO21COMPLETE_REGISTRATIONyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "TUTORIAL_COMPLETION",
+            "printedName": "TUTORIAL_COMPLETION",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventTUTORIAL_COMPLETION",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO19TUTORIAL_COMPLETIONyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "ADD_TO_CART",
+            "printedName": "ADD_TO_CART",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventADD_TO_CART",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO11ADD_TO_CARTyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "ADD_TO_WISHLIST",
+            "printedName": "ADD_TO_WISHLIST",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventADD_TO_WISHLIST",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO15ADD_TO_WISHLISTyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "INITIATE_CHECKOUT",
+            "printedName": "INITIATE_CHECKOUT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventINITIATE_CHECKOUT",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO17INITIATE_CHECKOUTyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "PURCHASE",
+            "printedName": "PURCHASE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventPURCHASE",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO8PURCHASEyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Var",
+            "name": "ACHIEVEMENT_UNLOCKED",
+            "printedName": "ACHIEVEMENT_UNLOCKED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventACHIEVEMENT_UNLOCKED",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO20ACHIEVEMENT_UNLOCKEDyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 8
+          },
+          {
+            "kind": "Var",
+            "name": "SHARE",
+            "printedName": "SHARE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventSHARE",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO5SHAREyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 9
+          },
+          {
+            "kind": "Var",
+            "name": "OPEN_FROM_NOTIFACTION",
+            "printedName": "OPEN_FROM_NOTIFACTION",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventOPEN_FROM_NOTIFACTION",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO21OPEN_FROM_NOTIFACTIONyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 10
+          },
+          {
+            "kind": "Var",
+            "name": "SUBSCRIBE",
+            "printedName": "SUBSCRIBE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventSUBSCRIBE",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO9SUBSCRIBEyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 11
+          },
+          {
+            "kind": "Var",
+            "name": "START_TRIAL",
+            "printedName": "START_TRIAL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UJourneySDK.UJInAppEvent.Type) -> UJourneySDK.UJInAppEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "UJourneySDK.UJInAppEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UJInAppEvent",
+                        "printedName": "UJourneySDK.UJInAppEvent",
+                        "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@UJourneySDK@E@UJInAppEvent@UJInAppEventSTART_TRIAL",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO11START_TRIALyA2CmF",
+            "moduleName": "UJourneySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 12
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UJourneySDK.UJInAppEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UJInAppEvent",
+                    "printedName": "UJourneySDK.UJInAppEvent",
+                    "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11UJourneySDK12UJInAppEventO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO8rawValueACSgSi_tcfc",
+            "moduleName": "UJourneySDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11UJourneySDK12UJInAppEventO8rawValueSivp",
+            "mangledName": "$s11UJourneySDK12UJInAppEventO8rawValueSivp",
+            "moduleName": "UJourneySDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11UJourneySDK12UJInAppEventO8rawValueSivg",
+                "mangledName": "$s11UJourneySDK12UJInAppEventO8rawValueSivg",
+                "moduleName": "UJourneySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@UJourneySDK@E@UJInAppEvent",
+        "mangledName": "$s11UJourneySDK12UJInAppEventO",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 246,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 273,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 310,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 339,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 375,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 401,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 427,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 456,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 482,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 508,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1468,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 2303,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 2346,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "Array",
+      "offset": 2423,
+      "length": 7,
+      "value": "[\"en0\"]"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "Array",
+      "offset": 2465,
+      "length": 41,
+      "value": "[\"pdp_ip0\", \"pdp_ip1\", \"pdp_ip2\", \"pdp_ip3\"]"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "StringLiteral",
+      "offset": 2675,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3015,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3277,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJTrackerJS.swift",
+      "kind": "StringLiteral",
+      "offset": 211,
+      "length": 12129,
+      "value": "\"\nconst getBrowserFingerprint = async ({\n    hardwareOnly = true\n} = {}) => {\n    const {\n        cookieEnabled,\n        deviceMemory,\n        doNotTrack,\n        hardwareConcurrency,\n        language,\n        languages,\n        maxTouchPoints,\n        platform,\n        userAgent,\n        vendor\n    } = window.navigator;\n\n    \/\/ we use screen info only on mobile, because on desktop the user may use multiple monitors\n    const enableScreen = \/Mobi|Android|iPhone|iPad|iPod\/i.test(navigator.userAgent);\n\n    const {\n        width,\n        height,\n        colorDepth,\n        pixelDepth\n    } = enableScreen ? window.screen : {}; \/\/ undefined will remove this from the stringify down here\n    const timezoneOffset = new Date().getTimezoneOffset();\n    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;\n    const touchSupport = \"ontouchstart\" in window;\n    const devicePixelRatio = window.devicePixelRatio;\n\n    const canvas = getCanvasID();\n    const audioId = await getAudioID();\n    const audioInfo = getAudioInfo();\n    const webgl = getWebglID();\n    const webglInfo = getWebglInfo();\n    const fontsId = getFontsID();\n\n    const data = hardwareOnly ? {\n        audioId,\n        audioInfo,\n        fontsId,\n        canvas,\n        colorDepth,\n        deviceMemory,\n        devicePixelRatio,\n        hardwareConcurrency,\n        height,\n        maxTouchPoints,\n        pixelDepth,\n        platform,\n        touchSupport,\n        webgl,\n        webglInfo,\n        width,\n    } : {\n        audioInfo,\n        audio,\n        canvas,\n        colorDepth,\n        cookieEnabled,\n        deviceMemory,\n        devicePixelRatio,\n        doNotTrack,\n        hardwareConcurrency,\n        height,\n        language,\n        languages,\n        maxTouchPoints,\n        pixelDepth,\n        platform,\n        timezone,\n        timezoneOffset,\n        touchSupport,\n        userAgent,\n        vendor,\n        webgl,\n        webglInfo,\n        width,\n    };\n\n    const payload = JSON.stringify(data, null, 2);\n    const result = murmurhash3_32_gc(payload);\n    return result;\n};\n\nconst getCanvasID = () => {\n    try {\n        const canvas = document.createElement(\"canvas\");\n        const ctx = canvas.getContext(\"2d\");\n        const text = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~1!2@3#4$5%6^7&8*9(0)-_=+[{]}|;:',<.>\/?\";\n        ctx.textBaseline = \"top\";\n        ctx.font = \"14px 'Arial'\";\n        ctx.textBaseline = \"alphabetic\";\n        ctx.fillStyle = \"#f60\";\n        ctx.fillRect(125, 1, 62, 20);\n        ctx.fillStyle = \"#069\";\n        ctx.fillText(text, 2, 15);\n        ctx.fillStyle = \"rgba(102, 204, 0, 0.7)\";\n        ctx.fillText(text, 4, 17);\n\n        const result = canvas.toDataURL();\n\n        ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n        return murmurhash3_32_gc(result);\n    } catch {\n        return null;\n    }\n};\n\nconst getWebglID = () => {\n    try {\n        const canvas = document.createElement(\"canvas\");\n        const ctx = canvas.getContext(\"webgl\");\n        canvas.width = 256;\n        canvas.height = 128;\n\n        const f =\n            \"attribute vec2 attrVertex;varying vec2 varyinTexCoordinate;uniform vec2 uniformOffset;void main(){varyinTexCoordinate=attrVertex+uniformOffset;gl_Position=vec4(attrVertex,0,1);}\";\n        const g = \"precision mediump float;varying vec2 varyinTexCoordinate;void main() {gl_FragColor=vec4(varyinTexCoordinate,0,1);}\";\n        const h = ctx.createBuffer();\n\n        ctx.bindBuffer(ctx.ARRAY_BUFFER, h);\n\n        const i = new Float32Array([-0.2, -0.9, 0, 0.4, -0.26, 0, 0, 0.7321, 0]);\n\n        ctx.bufferData(ctx.ARRAY_BUFFER, i, ctx.STATIC_DRAW);\n        h.itemSize = 3;\n        h.numItems = 3;\n\n        const j = ctx.createProgram();\n        const k = ctx.createShader(ctx.VERTEX_SHADER);\n\n        ctx.shaderSource(k, f);\n        ctx.compileShader(k);\n\n        const l = ctx.createShader(ctx.FRAGMENT_SHADER);\n\n        ctx.shaderSource(l, g);\n        ctx.compileShader(l);\n        ctx.attachShader(j, k);\n        ctx.attachShader(j, l);\n        ctx.linkProgram(j);\n        ctx.useProgram(j);\n\n        j.vertexPosAttrib = ctx.getAttribLocation(j, \"attrVertex\");\n        j.offsetUniform = ctx.getUniformLocation(j, \"uniformOffset\");\n\n        ctx.enableVertexAttribArray(j.vertexPosArray);\n        ctx.vertexAttribPointer(j.vertexPosAttrib, h.itemSize, ctx.FLOAT, !1, 0, 0);\n        ctx.uniform2f(j.offsetUniform, 1, 1);\n        ctx.drawArrays(ctx.TRIANGLE_STRIP, 0, h.numItems);\n\n        const n = new Uint8Array(canvas.width * canvas.height * 4);\n        ctx.readPixels(0, 0, canvas.width, canvas.height, ctx.RGBA, ctx.UNSIGNED_BYTE, n);\n\n        const result = JSON.stringify(n).replace(\/,?\"[0-9]+\":\/g, \"\");\n\n        ctx.clear(ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT | ctx.STENCIL_BUFFER_BIT);\n\n        return murmurhash3_32_gc(result);\n    } catch {\n        return null;\n    }\n};\n\nconst getWebglInfo = () => {\n    try {\n        const ctx = document.createElement(\"canvas\").getContext(\"webgl\");\n\n        const result = {\n            VERSION: String(ctx.getParameter(ctx.VERSION)),\n            SHADING_LANGUAGE_VERSION: String(ctx.getParameter(ctx.SHADING_LANGUAGE_VERSION)),\n            VENDOR: String(ctx.getParameter(ctx.VENDOR)),\n            SUPPORTED_EXTENSIONS: String(ctx.getSupportedExtensions()),\n        };\n\n        return result;\n    } catch {\n        return null;\n    }\n};\n\nconst getAudioInfo = () => {\n    try {\n        const OfflineAudioContext = window.OfflineAudioContext || window.webkitOfflineAudioContext;\n        const length = 44100;\n        const sampleRate = 44100;\n        const context = new OfflineAudioContext(1, length, sampleRate);\n\n        const result = {\n            sampleRate: context.sampleRate,\n            channelCount: context.destination.maxChannelCount,\n            outputLatency: context.outputLatency,\n            state: context.state,\n            baseLatency: context.baseLatency,\n        };\n\n        return result;\n    } catch {\n        return null;\n    }\n};\n\nconst getAudioID = async () => {\n    try {\n        const OfflineAudioContext = window.OfflineAudioContext || window.webkitOfflineAudioContext;\n        const sampleRate = 44100;\n        const length = 44100; \/\/ Number of samples (1 second of audio)\n        const context = new OfflineAudioContext(1, length, sampleRate);\n\n        \/\/ Create an oscillator to generate sound\n        const oscillator = context.createOscillator();\n        oscillator.type = \"sine\";\n        oscillator.frequency.value = 440;\n\n        oscillator.connect(context.destination);\n        oscillator.start();\n\n        \/\/ Render the audio into a buffer\n        const renderedBuffer = await context.startRendering();\n        const channelData = renderedBuffer.getChannelData(0);\n\n        \/\/ Generate fingerprint by summing the absolute values of the audio data\n        const result = channelData.reduce((acc, val) => acc + Math.abs(val), 0).toString();\n\n        return murmurhash3_32_gc(result);\n    } catch {\n        return null;\n    }\n};\n\nconst getFontsID = () => {\n    try {\n        \/\/ Base fonts to compare against\n        const baseFonts = ['monospace', 'sans-serif', 'serif'];\n\n        \/\/ List of fonts to detect\n        const fontsToDetect = [\n            \/\/ Standard Fonts\n            'Arial', 'Arial Black', 'Arial Narrow', 'Calibri', 'Cambria', 'Cambria Math', 'Comic Sans MS',\n            'Consolas', 'Courier', 'Courier New', 'Georgia', 'Helvetica', 'Impact', 'Lucida Console',\n            'Lucida Sans Unicode', 'Microsoft Sans Serif', 'Palatino', 'Palatino Linotype', 'Segoe UI',\n            'Tahoma', 'Times', 'Times New Roman', 'Trebuchet MS', 'Verdana',\n\n            \/\/ Additional Windows Fonts\n            'Bahnschrift', 'Candara', 'Century Gothic', 'Franklin Gothic', 'Gadugi', 'Garamond',\n            'Leelawadee UI', 'MS Gothic', 'MS PGothic', 'MS Sans Serif', 'MS Serif', 'Segoe Print',\n            'Segoe Script', 'Segoe UI Light', 'Segoe UI Semibold', 'Symbol', 'Webdings', 'Wingdings',\n\n            \/\/ Additional Mac Fonts\n            'American Typewriter', 'Andale Mono', 'Apple Chancery', 'AppleGothic', 'AppleMyungjo',\n            'Arial Hebrew', 'Arial Rounded MT Bold', 'Avenir', 'Avenir Next', 'Baskerville',\n            'Big Caslon', 'Brush Script MT', 'Copperplate', 'Didot', 'Futura', 'Geneva', 'Gill Sans',\n            'Helvetica Neue', 'Hoefler Text', 'Lucida Grande', 'Menlo', 'Monaco', 'Optima',\n            'Palatino', 'Papyrus', 'Rockwell', 'Skia', 'Zapfino',\n\n            \/\/ Popular Web Fonts\n            'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Raleway', 'Ubuntu', 'Noto Sans',\n            'Source Sans Pro', 'Poppins', 'Oswald', 'Merriweather', 'Playfair Display',\n            'Fira Sans', 'PT Sans', 'Nunito', 'Work Sans', 'Quicksand', 'Rubik'\n        ];\n\n        \/\/ Create a hidden div for testing\n        const testDiv = document.createElement('div');\n        testDiv.style.position = 'absolute';\n        testDiv.style.left = '-9999px';\n        testDiv.style.visibility = 'hidden';\n        testDiv.style.fontSize = '72px';\n        document.body.appendChild(testDiv);\n\n        const getWidth = (fontFamily) => {\n            testDiv.style.fontFamily = fontFamily;\n            testDiv.textContent = 'mmmmmmmmmmlli'; \/\/ Test string\n            return testDiv.offsetWidth;\n        };\n\n        const availableFonts = [];\n\n        \/\/ Check each font\n        fontsToDetect.forEach(font => {\n            let detected = false;\n\n            \/\/ Compare with each base font\n            for (let baseFont of baseFonts) {\n                \/\/ Get width with the test font first\n                const baseWidth = getWidth(`'${font}', ${baseFont}`);\n                const fallbackWidth = getWidth(baseFont);\n\n                \/\/ If widths are different, the font is available\n                if (baseWidth !== fallbackWidth) {\n                    detected = true;\n                    break;\n                }\n            }\n\n            if (detected) {\n                availableFonts.push(font);\n            }\n        });\n\n        \/\/ Clean up\n        document.body.removeChild(testDiv);\n\n        \/\/ Sort fonts to ensure consistent ordering before hashing\n        availableFonts.sort();\n        \/\/ Convert array to string and hash it\n        return murmurhash3_32_gc(availableFonts.join(','));\n    } catch {\n        return null;\n    }\n};\n\nconst murmurhash3_32_gc = (key) => {\n    const remainder = key.length & 3; \/\/ key.length % 4\n    const bytes = key.length - remainder;\n    const c1 = 0xcc9e2d51;\n    const c2 = 0x1b873593;\n\n    let h1;\n    let h1b;\n    let k1;\n\n    for (let i = 0; i < bytes; i++) {\n        k1 = (key.charCodeAt(i) & 0xff) | ((key.charCodeAt(++i) & 0xff) << 8) | ((key.charCodeAt(++i) & 0xff) << 16) | ((key.charCodeAt(++i) & 0xff) << 24);\n        ++i;\n\n        k1 = ((k1 & 0xffff) * c1 + ((((k1 >>> 16) * c1) & 0xffff) << 16)) & 0xffffffff;\n        k1 = (k1 << 15) | (k1 >>> 17);\n        k1 = ((k1 & 0xffff) * c2 + ((((k1 >>> 16) * c2) & 0xffff) << 16)) & 0xffffffff;\n\n        h1 ^= k1;\n        h1 = (h1 << 13) | (h1 >>> 19);\n        h1b = ((h1 & 0xffff) * 5 + ((((h1 >>> 16) * 5) & 0xffff) << 16)) & 0xffffffff;\n        h1 = (h1b & 0xffff) + 0x6b64 + ((((h1b >>> 16) + 0xe654) & 0xffff) << 16);\n    }\n\n    const i = bytes - 1;\n\n    k1 = 0;\n\n    switch (remainder) {\n        case 3: {\n            k1 ^= (key.charCodeAt(i + 2) & 0xff) << 16;\n            break;\n        }\n        case 2: {\n            k1 ^= (key.charCodeAt(i + 1) & 0xff) << 8;\n            break;\n        }\n        case 1: {\n            k1 ^= key.charCodeAt(i) & 0xff;\n            break;\n        }\n    }\n\n    k1 = ((k1 & 0xffff) * c1 + ((((k1 >>> 16) * c1) & 0xffff) << 16)) & 0xffffffff;\n    k1 = (k1 << 15) | (k1 >>> 17);\n    k1 = ((k1 & 0xffff) * c2 + ((((k1 >>> 16) * c2) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= k1;\n\n    h1 ^= key.length;\n\n    h1 ^= h1 >>> 16;\n    h1 = ((h1 & 0xffff) * 0x85ebca6b + ((((h1 >>> 16) * 0x85ebca6b) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= h1 >>> 13;\n    h1 = ((h1 & 0xffff) * 0xc2b2ae35 + ((((h1 >>> 16) * 0xc2b2ae35) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= h1 >>> 16;\n\n    return h1 >>> 0;\n};\n\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 254,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 284,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 319,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 352,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 377,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 406,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 437,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 459,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 493,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 512,
+      "length": 1,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 547,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 571,
+      "length": 2,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 597,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 254,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 284,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 319,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 352,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 377,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 406,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 437,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 459,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 493,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 512,
+      "length": 1,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 547,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 571,
+      "length": 2,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 597,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 282,
+      "length": 13,
+      "value": "\"status_code\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 282,
+      "length": 13,
+      "value": "\"status_code\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 504,
+      "length": 14,
+      "value": "\"access_token\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 549,
+      "length": 17,
+      "value": "\"expiration_time\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 504,
+      "length": 14,
+      "value": "\"access_token\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 549,
+      "length": 17,
+      "value": "\"expiration_time\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 728,
+      "length": 13,
+      "value": "\"status_code\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 728,
+      "length": 13,
+      "value": "\"status_code\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1052,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1122,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1154,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1177,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1203,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1052,
+      "length": 1,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1122,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1154,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1177,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1203,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1052,
+      "length": 1,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1122,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1154,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1177,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1203,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1254,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1324,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1356,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1377,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1404,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1431,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1460,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1254,
+      "length": 1,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1324,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1356,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1377,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1404,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1431,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1460,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1254,
+      "length": 1,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1324,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1356,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1377,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1404,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1431,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1460,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 18,
+      "value": "\"com.ujsdk.logger\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJLogger.swift",
+      "kind": "BooleanLiteral",
+      "offset": 280,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 158,
+      "length": 19,
+      "value": "\"com.ujsdk.session\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 220,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 339,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 377,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 416,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
+      "kind": "Array",
+      "offset": 580,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 611,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJFileManager.swift",
+      "kind": "StringLiteral",
+      "offset": 172,
+      "length": 16,
+      "value": "\"com.ujsdk.file\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJFileManager.swift",
+      "kind": "StringLiteral",
+      "offset": 897,
+      "length": 12,
+      "value": "\"token.data\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJFileManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2412,
+      "length": 14,
+      "value": "\"version.data\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJNetworkEngine.swift",
+      "kind": "StringLiteral",
+      "offset": 156,
+      "length": 25,
+      "value": "\"https:\/\/api.ujourney.ai\""
+    }
+  ]
+}

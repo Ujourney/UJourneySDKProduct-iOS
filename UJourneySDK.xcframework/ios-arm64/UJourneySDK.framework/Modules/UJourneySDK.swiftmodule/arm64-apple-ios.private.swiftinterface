@@ -1,0 +1,47 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name UJourneySDK
+import CryptoKit
+import Foundation
+import Swift
+import UIKit
+@_exported import UJourneySDK
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public protocol UJService : ObjectiveC.NSObjectProtocol {
+  @objc func activate(_ secretKey: Swift.String)
+  @objc func report(_ inAppEvent: UJourneySDK.UJInAppEvent, needAsset: Swift.Bool, params: [Swift.String : Swift.String])
+  @objc func enableTestMode(_ open: Swift.Bool)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class UJSDK : ObjectiveC.NSObject, UJourneySDK.UJService {
+  @objc public static let shared: UJourneySDK.UJSDK
+  @objc public func activate(_ secretKey: Swift.String)
+  @objc public func report(_ inAppEvent: UJourneySDK.UJInAppEvent, needAsset: Swift.Bool, params: [Swift.String : Swift.String])
+  @objc public func enableTestMode(_ open: Swift.Bool)
+  @objc deinit
+}
+@objc public enum UJInAppEvent : Swift.Int {
+  case INSTALL = 0
+  case ADD_PAYMENT_INFO = 1
+  case COMPLETE_REGISTRATION = 2
+  case TUTORIAL_COMPLETION = 3
+  case ADD_TO_CART = 4
+  case ADD_TO_WISHLIST = 5
+  case INITIATE_CHECKOUT = 6
+  case PURCHASE = 7
+  case ACHIEVEMENT_UNLOCKED = 8
+  case SHARE = 9
+  case OPEN_FROM_NOTIFACTION = 10
+  case SUBSCRIBE = 11
+  case START_TRIAL = 12
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UJourneySDK.UJInAppEvent : Swift.Equatable {}
+extension UJourneySDK.UJInAppEvent : Swift.Hashable {}
+extension UJourneySDK.UJInAppEvent : Swift.RawRepresentable {}

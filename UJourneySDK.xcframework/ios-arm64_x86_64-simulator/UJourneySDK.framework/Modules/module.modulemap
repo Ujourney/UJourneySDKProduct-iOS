@@ -1,0 +1,6 @@
+framework module UJourneySDK {
+  umbrella header "UJourneySDK.h"
+  export *
+
+  module * { export * }
+}
