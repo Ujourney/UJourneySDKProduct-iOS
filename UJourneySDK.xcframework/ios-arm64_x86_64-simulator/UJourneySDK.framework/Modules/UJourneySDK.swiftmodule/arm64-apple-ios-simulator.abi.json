@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "UJourneySDK",
+    "printedName": "UJourneySDK",
     "children": [
       {
         "kind": "Import",
@@ -22,7 +22,7 @@
           {
             "kind": "Function",
             "name": "activate",
-            "printedName": "activate(_:)",
+            "printedName": "activate(_:secretKey:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -34,11 +34,17 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@UJourneySDK@objc(pl)UJService(im)activate:",
-            "mangledName": "$s11UJourneySDK9UJServiceP8activateyySSF",
+            "usr": "c:@M@UJourneySDK@objc(pl)UJService(im)activate:secretKey:",
+            "mangledName": "$s11UJourneySDK9UJServiceP8activate_9secretKeyySS_SStF",
             "moduleName": "UJourneySDK",
             "genericSig": "<τ_0_0 where τ_0_0 : UJourneySDK.UJService>",
             "sugared_genericSig": "<Self where Self : UJourneySDK.UJService>",
@@ -145,6 +151,22 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -208,7 +230,7 @@
           {
             "kind": "Function",
             "name": "activate",
-            "printedName": "activate(_:)",
+            "printedName": "activate(_:secretKey:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -220,13 +242,19 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(im)activate:",
-            "mangledName": "$s11UJourneySDK5UJSDKC8activateyySSF",
+            "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(im)activate:secretKey:",
+            "mangledName": "$s11UJourneySDK5UJSDKC8activate_9secretKeyySS_SStF",
             "moduleName": "UJourneySDK",
-            "objc_name": "activate:",
+            "objc_name": "activate:secretKey:",
             "declAttributes": [
               "ObjC",
               "AccessControl"
@@ -340,6 +368,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -410,6 +452,20 @@
         "kind": "Import",
         "name": "WebKit",
         "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AdSupport",
+        "printedName": "AdSupport",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AppTrackingTransparency",
+        "printedName": "AppTrackingTransparency",
         "declKind": "Import",
         "moduleName": "UJourneySDK"
       },
@@ -1057,6 +1113,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1167,126 +1237,126 @@
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 246,
+      "offset": 294,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 273,
+      "offset": 321,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 310,
+      "offset": 358,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 339,
+      "offset": 387,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 375,
+      "offset": 423,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 401,
+      "offset": 449,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 427,
+      "offset": 475,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 456,
+      "offset": 504,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 482,
+      "offset": 530,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 508,
+      "offset": 556,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "IntegerLiteral",
-      "offset": 1468,
+      "offset": 2394,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 2303,
+      "offset": 3229,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 2346,
+      "offset": 3272,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "Array",
-      "offset": 2423,
+      "offset": 3349,
       "length": 7,
       "value": "[\"en0\"]"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "Array",
-      "offset": 2465,
+      "offset": 3391,
       "length": 41,
       "value": "[\"pdp_ip0\", \"pdp_ip1\", \"pdp_ip2\", \"pdp_ip3\"]"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 2675,
+      "offset": 3601,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "IntegerLiteral",
-      "offset": 3015,
+      "offset": 3941,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "IntegerLiteral",
-      "offset": 3277,
+      "offset": 4203,
       "length": 1,
       "value": "0"
     },
@@ -1389,104 +1459,6 @@
       "value": "12"
     },
     {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 254,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 284,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 319,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 352,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 377,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 406,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 437,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 459,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 493,
-      "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 512,
-      "length": 1,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 547,
-      "length": 2,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 571,
-      "length": 2,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 597,
-      "length": 2,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "StringLiteral",
-      "offset": 282,
-      "length": 13,
-      "value": "\"status_code\""
-    },
-    {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "StringLiteral",
       "offset": 282,
@@ -1506,27 +1478,6 @@
       "offset": 549,
       "length": 17,
       "value": "\"expiration_time\""
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "StringLiteral",
-      "offset": 504,
-      "length": 14,
-      "value": "\"access_token\""
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "StringLiteral",
-      "offset": 549,
-      "length": 17,
-      "value": "\"expiration_time\""
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "StringLiteral",
-      "offset": 728,
-      "length": 13,
-      "value": "\"status_code\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
@@ -1573,176 +1524,8 @@
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1052,
-      "length": 1,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1122,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1154,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1177,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1203,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1052,
-      "length": 1,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1122,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1154,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1177,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1203,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
       "offset": 1254,
       "length": 2,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1324,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1356,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1377,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1404,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1431,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1460,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1254,
-      "length": 1,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1324,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1356,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1377,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1404,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1431,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1460,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1254,
-      "length": 1,
       "value": "-1"
     },
     {

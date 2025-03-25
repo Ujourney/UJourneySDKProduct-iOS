@@ -1,6 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name UJourneySDK
+import AdSupport
+import AppTrackingTransparency
 import CryptoKit
 import Foundation
 import Swift
@@ -11,13 +13,13 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 @objc public protocol UJService : ObjectiveC.NSObjectProtocol {
-  @objc func activate(_ secretKey: Swift.String)
+  @objc func activate(_ appID: Swift.String, secretKey: Swift.String)
   @objc func report(_ inAppEvent: UJourneySDK.UJInAppEvent, needAsset: Swift.Bool, params: [Swift.String : Swift.String])
   @objc func enableTestMode(_ open: Swift.Bool)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class UJSDK : ObjectiveC.NSObject, UJourneySDK.UJService {
   @objc public static let shared: UJourneySDK.UJSDK
-  @objc public func activate(_ secretKey: Swift.String)
+  @objc public func activate(_ appID: Swift.String, secretKey: Swift.String)
   @objc public func report(_ inAppEvent: UJourneySDK.UJInAppEvent, needAsset: Swift.Bool, params: [Swift.String : Swift.String])
   @objc public func enableTestMode(_ open: Swift.Bool)
   @objc deinit
