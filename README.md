@@ -10,7 +10,7 @@ UJourneySDK supports installation via Swift Package Manager (SPM) in Xcode.
 
 #### Xcode Integration
 1. In Xcode, select "File" → "Add Package Dependencies..."
-2. Enter the repository URL: `https://github.com/REPOSITORY_OWNER/UJourneySDKProduct-iOS.git`
+2. Enter the repository URL: `https://github.com/Ujourney/UJourneySDKProduct-iOS`
 3. Select the desired version, branch, or commit
 4. Click "Add Package"
 
@@ -19,7 +19,7 @@ To integrate using a `Package.swift` file, add the following dependency:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/REPOSITORY_OWNER/UJourneySDKProduct-iOS.git", from: "1.0.0")
+    .package(url: "https://github.com/Ujourney/UJourneySDKProduct-iOS", from: "1.0.0")
 ]
 ```
 
