@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		wl4IoJ9hV1E7IrURfvnXiJLHEOM=
+		deIdJHMKoFwkcHI/9jRuOjMIXTk=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		smy2ad0LKD02g2LDZIW9UpfBmws=
+		+SkU/m3gTOoZIRYVDCqbKQDslLc=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		smy2ad0LKD02g2LDZIW9UpfBmws=
+		+SkU/m3gTOoZIRYVDCqbKQDslLc=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XB+8jNevyP1bc6tqNEk3Rt/wFr4=
+		o7Tu4zK9y66+J14ZHX+xn2GtAU0=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		wl4IoJ9hV1E7IrURfvnXiJLHEOM=
+		deIdJHMKoFwkcHI/9jRuOjMIXTk=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		vtct0ek21H/nh9NMHVXVTq7Uh18=
+		DF5DNY3M+9KYKsMMsr/puGngnoE=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		vtct0ek21H/nh9NMHVXVTq7Uh18=
+		DF5DNY3M+9KYKsMMsr/puGngnoE=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1qM5GZLBy19m/ckveT9IsgZc1sg=
+		oNJQ3QDNSAk7JNaf5y3p4CZUn8o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,22 +74,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wl4IoJ9hV1E7IrURfvnXiJLHEOM=
+			deIdJHMKoFwkcHI/9jRuOjMIXTk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4F8+2lwTcVHAehzN5F2wW5XhbvvDWp1gyqvvOnQrTQ4=
+			c8Hzoj3X673PZlvWKGfXBIB30lQTHdVxVjVpr8YIHz8=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			smy2ad0LKD02g2LDZIW9UpfBmws=
+			+SkU/m3gTOoZIRYVDCqbKQDslLc=
 			</data>
 			<key>hash2</key>
 			<data>
-			SZFGt7cVbynSXQL1WYGPyo4qTJ0ueVfE3N6lnRxUb0M=
+			fkp4d4BC/uCnwJDDUQ7SrBssnGYndWcdP2m99USDzT4=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -107,44 +107,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			smy2ad0LKD02g2LDZIW9UpfBmws=
+			+SkU/m3gTOoZIRYVDCqbKQDslLc=
 			</data>
 			<key>hash2</key>
 			<data>
-			SZFGt7cVbynSXQL1WYGPyo4qTJ0ueVfE3N6lnRxUb0M=
+			fkp4d4BC/uCnwJDDUQ7SrBssnGYndWcdP2m99USDzT4=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XB+8jNevyP1bc6tqNEk3Rt/wFr4=
+			o7Tu4zK9y66+J14ZHX+xn2GtAU0=
 			</data>
 			<key>hash2</key>
 			<data>
-			jPpchWBidzd2LIprLMaempeHgM0w15augGDylgu5Mnc=
+			wrg1+JGHVWs+TCdgLQ+UU4QN5ysMFLAi2YYqMyLgeYY=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wl4IoJ9hV1E7IrURfvnXiJLHEOM=
+			deIdJHMKoFwkcHI/9jRuOjMIXTk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4F8+2lwTcVHAehzN5F2wW5XhbvvDWp1gyqvvOnQrTQ4=
+			c8Hzoj3X673PZlvWKGfXBIB30lQTHdVxVjVpr8YIHz8=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vtct0ek21H/nh9NMHVXVTq7Uh18=
+			DF5DNY3M+9KYKsMMsr/puGngnoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			UYph0pO1RJWJh9P4IQmw4FFUIAEBGBDlFo9L6D9rNvo=
+			Ot0SMQUxXOImcpmdFb+3eHIcCQglpLE7QFd2gcVeGKk=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -162,22 +162,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vtct0ek21H/nh9NMHVXVTq7Uh18=
+			DF5DNY3M+9KYKsMMsr/puGngnoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			UYph0pO1RJWJh9P4IQmw4FFUIAEBGBDlFo9L6D9rNvo=
+			Ot0SMQUxXOImcpmdFb+3eHIcCQglpLE7QFd2gcVeGKk=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1qM5GZLBy19m/ckveT9IsgZc1sg=
+			oNJQ3QDNSAk7JNaf5y3p4CZUn8o=
 			</data>
 			<key>hash2</key>
 			<data>
-			2PnTTLOBR1B2jSVxwFf3F4r12bmWYvoAgzF7C6u+EYc=
+			mIlYDv/88/4cn0jGbWqkS4YB5m0ByZt2/cvvXtfBFak=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

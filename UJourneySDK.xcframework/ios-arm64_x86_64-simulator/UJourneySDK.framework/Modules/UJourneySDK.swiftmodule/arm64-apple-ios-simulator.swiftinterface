@@ -5,6 +5,7 @@ import AdSupport
 import AppTrackingTransparency
 import CryptoKit
 import Foundation
+import StoreKit
 import Swift
 import UIKit
 @_exported import UJourneySDK
@@ -13,13 +14,13 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 @objc public protocol UJService : ObjectiveC.NSObjectProtocol {
-  @objc func activate(_ appID: Swift.String, secretKey: Swift.String)
+  @objc func activate(_ appID: Swift.String, secretKey: Swift.String, enableSKAN: Swift.Bool)
   @objc func report(_ inAppEvent: UJourneySDK.UJInAppEvent, needAsset: Swift.Bool, params: [Swift.String : Swift.String])
   @objc func enableTestMode(_ open: Swift.Bool)
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class UJSDK : ObjectiveC.NSObject, UJourneySDK.UJService {
   @objc public static let shared: UJourneySDK.UJSDK
-  @objc public func activate(_ appID: Swift.String, secretKey: Swift.String)
+  @objc public func activate(_ appID: Swift.String, secretKey: Swift.String, enableSKAN: Swift.Bool)
   @objc public func report(_ inAppEvent: UJourneySDK.UJInAppEvent, needAsset: Swift.Bool, params: [Swift.String : Swift.String])
   @objc public func enableTestMode(_ open: Swift.Bool)
   @objc deinit
@@ -43,6 +44,11 @@ import _SwiftConcurrencyShims
   public var rawValue: Swift.Int {
     get
   }
+}
+@_inheritsConvenienceInitializers @objc public class UJSKANValueMapper : ObjectiveC.NSObject {
+  @objc public static func getConversionValue(for event: UJourneySDK.UJInAppEvent) -> Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
 }
 extension UJourneySDK.UJInAppEvent : Swift.Equatable {}
 extension UJourneySDK.UJInAppEvent : Swift.Hashable {}

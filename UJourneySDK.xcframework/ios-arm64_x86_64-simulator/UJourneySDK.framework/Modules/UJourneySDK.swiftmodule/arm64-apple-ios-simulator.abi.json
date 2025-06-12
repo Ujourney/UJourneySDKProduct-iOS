@@ -22,7 +22,7 @@
           {
             "kind": "Function",
             "name": "activate",
-            "printedName": "activate(_:secretKey:)",
+            "printedName": "activate(_:secretKey:enableSKAN:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -40,11 +40,17 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@UJourneySDK@objc(pl)UJService(im)activate:secretKey:",
-            "mangledName": "$s11UJourneySDK9UJServiceP8activate_9secretKeyySS_SStF",
+            "usr": "c:@M@UJourneySDK@objc(pl)UJService(im)activate:secretKey:enableSKAN:",
+            "mangledName": "$s11UJourneySDK9UJServiceP8activate_9secretKey10enableSKANySS_SSSbtF",
             "moduleName": "UJourneySDK",
             "genericSig": "<τ_0_0 where τ_0_0 : UJourneySDK.UJService>",
             "sugared_genericSig": "<Self where Self : UJourneySDK.UJService>",
@@ -230,7 +236,7 @@
           {
             "kind": "Function",
             "name": "activate",
-            "printedName": "activate(_:secretKey:)",
+            "printedName": "activate(_:secretKey:enableSKAN:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -248,13 +254,19 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(im)activate:secretKey:",
-            "mangledName": "$s11UJourneySDK5UJSDKC8activate_9secretKeyySS_SStF",
+            "usr": "c:@M@UJourneySDK@objc(cs)UJSDK(im)activate:secretKey:enableSKAN:",
+            "mangledName": "$s11UJourneySDK5UJSDKC8activate_9secretKey10enableSKANySS_SSSbtF",
             "moduleName": "UJourneySDK",
-            "objc_name": "activate:secretKey:",
+            "objc_name": "activate:secretKey:enableSKAN:",
             "declAttributes": [
               "ObjC",
               "AccessControl"
@@ -488,6 +500,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK"
       },
       {
         "kind": "TypeDecl",
@@ -1164,13 +1183,147 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
+        "kind": "TypeDecl",
+        "name": "UJSKANValueMapper",
+        "printedName": "UJSKANValueMapper",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getConversionValue",
+            "printedName": "getConversionValue(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UJInAppEvent",
+                "printedName": "UJourneySDK.UJInAppEvent",
+                "usr": "c:@M@UJourneySDK@E@UJInAppEvent"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@UJourneySDK@objc(cs)UJSKANValueMapper(cm)getConversionValueFor:",
+            "mangledName": "$s11UJourneySDK17UJSKANValueMapperC18getConversionValue3forSiAA12UJInAppEventO_tFZ",
+            "moduleName": "UJourneySDK",
+            "static": true,
+            "objc_name": "getConversionValueFor:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UJSKANValueMapper",
+                "printedName": "UJourneySDK.UJSKANValueMapper",
+                "usr": "c:@M@UJourneySDK@objc(cs)UJSKANValueMapper"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@UJourneySDK@objc(cs)UJSKANValueMapper(im)init",
+            "mangledName": "$s11UJourneySDK17UJSKANValueMapperCACycfc",
+            "moduleName": "UJourneySDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@UJourneySDK@objc(cs)UJSKANValueMapper",
+        "mangledName": "$s11UJourneySDK17UJSKANValueMapperC",
         "moduleName": "UJourneySDK",
         "declAttributes": [
+          "AccessControl",
+          "ObjC",
           "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -1192,6 +1345,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "UJourneySDK"
       },
       {
         "kind": "Import",
@@ -1370,91 +1540,91 @@
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 254,
+      "offset": 270,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 284,
+      "offset": 300,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 319,
+      "offset": 335,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 352,
+      "offset": 368,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 377,
+      "offset": 393,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 406,
+      "offset": 422,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 437,
+      "offset": 453,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 459,
+      "offset": 475,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 493,
+      "offset": 509,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 512,
+      "offset": 528,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 547,
+      "offset": 563,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 571,
+      "offset": 587,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 597,
+      "offset": 613,
       "length": 2,
       "value": "12"
     },
@@ -1587,49 +1757,56 @@
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 158,
+      "offset": 174,
       "length": 19,
       "value": "\"com.ujsdk.session\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 220,
+      "offset": 236,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 339,
+      "offset": 355,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 377,
+      "offset": 393,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 416,
+      "offset": 432,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
       "kind": "Array",
-      "offset": 580,
+      "offset": 596,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 611,
+      "offset": 627,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJSessionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 684,
       "length": 5,
       "value": "false"
     },
