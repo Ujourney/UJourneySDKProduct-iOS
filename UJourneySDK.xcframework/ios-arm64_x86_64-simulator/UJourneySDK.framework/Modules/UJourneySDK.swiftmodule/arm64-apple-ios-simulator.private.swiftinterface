@@ -47,6 +47,8 @@ import _SwiftConcurrencyShims
 }
 @_inheritsConvenienceInitializers @objc public class UJSKANValueMapper : ObjectiveC.NSObject {
   @objc public static func getConversionValue(for event: UJourneySDK.UJInAppEvent) -> Swift.Int
+  @available(iOS 16.1, *)
+  @objc public static func getCoarseValue(for event: UJourneySDK.UJInAppEvent) -> StoreKit.SKAdNetwork.CoarseConversionValue?
   @objc override dynamic public init()
   @objc deinit
 }
