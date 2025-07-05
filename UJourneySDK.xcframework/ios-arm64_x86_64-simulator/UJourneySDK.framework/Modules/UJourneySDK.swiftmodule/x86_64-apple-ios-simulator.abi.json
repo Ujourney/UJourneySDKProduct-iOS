@@ -1531,57 +1531,64 @@
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
+      "kind": "BooleanLiteral",
+      "offset": 658,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "IntegerLiteral",
-      "offset": 2943,
+      "offset": 2979,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 3778,
+      "offset": 3814,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 3821,
+      "offset": 3857,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "Array",
-      "offset": 3898,
+      "offset": 3934,
       "length": 7,
       "value": "[\"en0\"]"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "Array",
-      "offset": 3940,
+      "offset": 3976,
       "length": 41,
       "value": "[\"pdp_ip0\", \"pdp_ip1\", \"pdp_ip2\", \"pdp_ip3\"]"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "StringLiteral",
-      "offset": 4150,
+      "offset": 4186,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "IntegerLiteral",
-      "offset": 4490,
+      "offset": 4526,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJInfoCollector.swift",
       "kind": "IntegerLiteral",
-      "offset": 4752,
+      "offset": 4788,
       "length": 1,
       "value": "0"
     },
