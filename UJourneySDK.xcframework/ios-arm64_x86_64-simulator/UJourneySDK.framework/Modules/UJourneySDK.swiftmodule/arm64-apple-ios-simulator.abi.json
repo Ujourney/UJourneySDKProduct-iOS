@@ -1589,8 +1589,8 @@
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJTrackerJS.swift",
       "kind": "StringLiteral",
       "offset": 211,
-      "length": 12129,
-      "value": "\"\nconst getBrowserFingerprint = async ({\n    hardwareOnly = true\n} = {}) => {\n    const {\n        cookieEnabled,\n        deviceMemory,\n        doNotTrack,\n        hardwareConcurrency,\n        language,\n        languages,\n        maxTouchPoints,\n        platform,\n        userAgent,\n        vendor\n    } = window.navigator;\n\n    \/\/ we use screen info only on mobile, because on desktop the user may use multiple monitors\n    const enableScreen = \/Mobi|Android|iPhone|iPad|iPod\/i.test(navigator.userAgent);\n\n    const {\n        width,\n        height,\n        colorDepth,\n        pixelDepth\n    } = enableScreen ? window.screen : {}; \/\/ undefined will remove this from the stringify down here\n    const timezoneOffset = new Date().getTimezoneOffset();\n    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;\n    const touchSupport = \"ontouchstart\" in window;\n    const devicePixelRatio = window.devicePixelRatio;\n\n    const canvas = getCanvasID();\n    const audioId = await getAudioID();\n    const audioInfo = getAudioInfo();\n    const webgl = getWebglID();\n    const webglInfo = getWebglInfo();\n    const fontsId = getFontsID();\n\n    const data = hardwareOnly ? {\n        audioId,\n        audioInfo,\n        fontsId,\n        canvas,\n        colorDepth,\n        deviceMemory,\n        devicePixelRatio,\n        hardwareConcurrency,\n        height,\n        maxTouchPoints,\n        pixelDepth,\n        platform,\n        touchSupport,\n        webgl,\n        webglInfo,\n        width,\n    } : {\n        audioInfo,\n        audio,\n        canvas,\n        colorDepth,\n        cookieEnabled,\n        deviceMemory,\n        devicePixelRatio,\n        doNotTrack,\n        hardwareConcurrency,\n        height,\n        language,\n        languages,\n        maxTouchPoints,\n        pixelDepth,\n        platform,\n        timezone,\n        timezoneOffset,\n        touchSupport,\n        userAgent,\n        vendor,\n        webgl,\n        webglInfo,\n        width,\n    };\n\n    const payload = JSON.stringify(data, null, 2);\n    const result = murmurhash3_32_gc(payload);\n    return result;\n};\n\nconst getCanvasID = () => {\n    try {\n        const canvas = document.createElement(\"canvas\");\n        const ctx = canvas.getContext(\"2d\");\n        const text = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~1!2@3#4$5%6^7&8*9(0)-_=+[{]}|;:',<.>\/?\";\n        ctx.textBaseline = \"top\";\n        ctx.font = \"14px 'Arial'\";\n        ctx.textBaseline = \"alphabetic\";\n        ctx.fillStyle = \"#f60\";\n        ctx.fillRect(125, 1, 62, 20);\n        ctx.fillStyle = \"#069\";\n        ctx.fillText(text, 2, 15);\n        ctx.fillStyle = \"rgba(102, 204, 0, 0.7)\";\n        ctx.fillText(text, 4, 17);\n\n        const result = canvas.toDataURL();\n\n        ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n        return murmurhash3_32_gc(result);\n    } catch {\n        return null;\n    }\n};\n\nconst getWebglID = () => {\n    try {\n        const canvas = document.createElement(\"canvas\");\n        const ctx = canvas.getContext(\"webgl\");\n        canvas.width = 256;\n        canvas.height = 128;\n\n        const f =\n            \"attribute vec2 attrVertex;varying vec2 varyinTexCoordinate;uniform vec2 uniformOffset;void main(){varyinTexCoordinate=attrVertex+uniformOffset;gl_Position=vec4(attrVertex,0,1);}\";\n        const g = \"precision mediump float;varying vec2 varyinTexCoordinate;void main() {gl_FragColor=vec4(varyinTexCoordinate,0,1);}\";\n        const h = ctx.createBuffer();\n\n        ctx.bindBuffer(ctx.ARRAY_BUFFER, h);\n\n        const i = new Float32Array([-0.2, -0.9, 0, 0.4, -0.26, 0, 0, 0.7321, 0]);\n\n        ctx.bufferData(ctx.ARRAY_BUFFER, i, ctx.STATIC_DRAW);\n        h.itemSize = 3;\n        h.numItems = 3;\n\n        const j = ctx.createProgram();\n        const k = ctx.createShader(ctx.VERTEX_SHADER);\n\n        ctx.shaderSource(k, f);\n        ctx.compileShader(k);\n\n        const l = ctx.createShader(ctx.FRAGMENT_SHADER);\n\n        ctx.shaderSource(l, g);\n        ctx.compileShader(l);\n        ctx.attachShader(j, k);\n        ctx.attachShader(j, l);\n        ctx.linkProgram(j);\n        ctx.useProgram(j);\n\n        j.vertexPosAttrib = ctx.getAttribLocation(j, \"attrVertex\");\n        j.offsetUniform = ctx.getUniformLocation(j, \"uniformOffset\");\n\n        ctx.enableVertexAttribArray(j.vertexPosArray);\n        ctx.vertexAttribPointer(j.vertexPosAttrib, h.itemSize, ctx.FLOAT, !1, 0, 0);\n        ctx.uniform2f(j.offsetUniform, 1, 1);\n        ctx.drawArrays(ctx.TRIANGLE_STRIP, 0, h.numItems);\n\n        const n = new Uint8Array(canvas.width * canvas.height * 4);\n        ctx.readPixels(0, 0, canvas.width, canvas.height, ctx.RGBA, ctx.UNSIGNED_BYTE, n);\n\n        const result = JSON.stringify(n).replace(\/,?\"[0-9]+\":\/g, \"\");\n\n        ctx.clear(ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT | ctx.STENCIL_BUFFER_BIT);\n\n        return murmurhash3_32_gc(result);\n    } catch {\n        return null;\n    }\n};\n\nconst getWebglInfo = () => {\n    try {\n        const ctx = document.createElement(\"canvas\").getContext(\"webgl\");\n\n        const result = {\n            VERSION: String(ctx.getParameter(ctx.VERSION)),\n            SHADING_LANGUAGE_VERSION: String(ctx.getParameter(ctx.SHADING_LANGUAGE_VERSION)),\n            VENDOR: String(ctx.getParameter(ctx.VENDOR)),\n            SUPPORTED_EXTENSIONS: String(ctx.getSupportedExtensions()),\n        };\n\n        return result;\n    } catch {\n        return null;\n    }\n};\n\nconst getAudioInfo = () => {\n    try {\n        const OfflineAudioContext = window.OfflineAudioContext || window.webkitOfflineAudioContext;\n        const length = 44100;\n        const sampleRate = 44100;\n        const context = new OfflineAudioContext(1, length, sampleRate);\n\n        const result = {\n            sampleRate: context.sampleRate,\n            channelCount: context.destination.maxChannelCount,\n            outputLatency: context.outputLatency,\n            state: context.state,\n            baseLatency: context.baseLatency,\n        };\n\n        return result;\n    } catch {\n        return null;\n    }\n};\n\nconst getAudioID = async () => {\n    try {\n        const OfflineAudioContext = window.OfflineAudioContext || window.webkitOfflineAudioContext;\n        const sampleRate = 44100;\n        const length = 44100; \/\/ Number of samples (1 second of audio)\n        const context = new OfflineAudioContext(1, length, sampleRate);\n\n        \/\/ Create an oscillator to generate sound\n        const oscillator = context.createOscillator();\n        oscillator.type = \"sine\";\n        oscillator.frequency.value = 440;\n\n        oscillator.connect(context.destination);\n        oscillator.start();\n\n        \/\/ Render the audio into a buffer\n        const renderedBuffer = await context.startRendering();\n        const channelData = renderedBuffer.getChannelData(0);\n\n        \/\/ Generate fingerprint by summing the absolute values of the audio data\n        const result = channelData.reduce((acc, val) => acc + Math.abs(val), 0).toString();\n\n        return murmurhash3_32_gc(result);\n    } catch {\n        return null;\n    }\n};\n\nconst getFontsID = () => {\n    try {\n        \/\/ Base fonts to compare against\n        const baseFonts = ['monospace', 'sans-serif', 'serif'];\n\n        \/\/ List of fonts to detect\n        const fontsToDetect = [\n            \/\/ Standard Fonts\n            'Arial', 'Arial Black', 'Arial Narrow', 'Calibri', 'Cambria', 'Cambria Math', 'Comic Sans MS',\n            'Consolas', 'Courier', 'Courier New', 'Georgia', 'Helvetica', 'Impact', 'Lucida Console',\n            'Lucida Sans Unicode', 'Microsoft Sans Serif', 'Palatino', 'Palatino Linotype', 'Segoe UI',\n            'Tahoma', 'Times', 'Times New Roman', 'Trebuchet MS', 'Verdana',\n\n            \/\/ Additional Windows Fonts\n            'Bahnschrift', 'Candara', 'Century Gothic', 'Franklin Gothic', 'Gadugi', 'Garamond',\n            'Leelawadee UI', 'MS Gothic', 'MS PGothic', 'MS Sans Serif', 'MS Serif', 'Segoe Print',\n            'Segoe Script', 'Segoe UI Light', 'Segoe UI Semibold', 'Symbol', 'Webdings', 'Wingdings',\n\n            \/\/ Additional Mac Fonts\n            'American Typewriter', 'Andale Mono', 'Apple Chancery', 'AppleGothic', 'AppleMyungjo',\n            'Arial Hebrew', 'Arial Rounded MT Bold', 'Avenir', 'Avenir Next', 'Baskerville',\n            'Big Caslon', 'Brush Script MT', 'Copperplate', 'Didot', 'Futura', 'Geneva', 'Gill Sans',\n            'Helvetica Neue', 'Hoefler Text', 'Lucida Grande', 'Menlo', 'Monaco', 'Optima',\n            'Palatino', 'Papyrus', 'Rockwell', 'Skia', 'Zapfino',\n\n            \/\/ Popular Web Fonts\n            'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Raleway', 'Ubuntu', 'Noto Sans',\n            'Source Sans Pro', 'Poppins', 'Oswald', 'Merriweather', 'Playfair Display',\n            'Fira Sans', 'PT Sans', 'Nunito', 'Work Sans', 'Quicksand', 'Rubik'\n        ];\n\n        \/\/ Create a hidden div for testing\n        const testDiv = document.createElement('div');\n        testDiv.style.position = 'absolute';\n        testDiv.style.left = '-9999px';\n        testDiv.style.visibility = 'hidden';\n        testDiv.style.fontSize = '72px';\n        document.body.appendChild(testDiv);\n\n        const getWidth = (fontFamily) => {\n            testDiv.style.fontFamily = fontFamily;\n            testDiv.textContent = 'mmmmmmmmmmlli'; \/\/ Test string\n            return testDiv.offsetWidth;\n        };\n\n        const availableFonts = [];\n\n        \/\/ Check each font\n        fontsToDetect.forEach(font => {\n            let detected = false;\n\n            \/\/ Compare with each base font\n            for (let baseFont of baseFonts) {\n                \/\/ Get width with the test font first\n                const baseWidth = getWidth(`'${font}', ${baseFont}`);\n                const fallbackWidth = getWidth(baseFont);\n\n                \/\/ If widths are different, the font is available\n                if (baseWidth !== fallbackWidth) {\n                    detected = true;\n                    break;\n                }\n            }\n\n            if (detected) {\n                availableFonts.push(font);\n            }\n        });\n\n        \/\/ Clean up\n        document.body.removeChild(testDiv);\n\n        \/\/ Sort fonts to ensure consistent ordering before hashing\n        availableFonts.sort();\n        \/\/ Convert array to string and hash it\n        return murmurhash3_32_gc(availableFonts.join(','));\n    } catch {\n        return null;\n    }\n};\n\nconst murmurhash3_32_gc = (key) => {\n    const remainder = key.length & 3; \/\/ key.length % 4\n    const bytes = key.length - remainder;\n    const c1 = 0xcc9e2d51;\n    const c2 = 0x1b873593;\n\n    let h1;\n    let h1b;\n    let k1;\n\n    for (let i = 0; i < bytes; i++) {\n        k1 = (key.charCodeAt(i) & 0xff) | ((key.charCodeAt(++i) & 0xff) << 8) | ((key.charCodeAt(++i) & 0xff) << 16) | ((key.charCodeAt(++i) & 0xff) << 24);\n        ++i;\n\n        k1 = ((k1 & 0xffff) * c1 + ((((k1 >>> 16) * c1) & 0xffff) << 16)) & 0xffffffff;\n        k1 = (k1 << 15) | (k1 >>> 17);\n        k1 = ((k1 & 0xffff) * c2 + ((((k1 >>> 16) * c2) & 0xffff) << 16)) & 0xffffffff;\n\n        h1 ^= k1;\n        h1 = (h1 << 13) | (h1 >>> 19);\n        h1b = ((h1 & 0xffff) * 5 + ((((h1 >>> 16) * 5) & 0xffff) << 16)) & 0xffffffff;\n        h1 = (h1b & 0xffff) + 0x6b64 + ((((h1b >>> 16) + 0xe654) & 0xffff) << 16);\n    }\n\n    const i = bytes - 1;\n\n    k1 = 0;\n\n    switch (remainder) {\n        case 3: {\n            k1 ^= (key.charCodeAt(i + 2) & 0xff) << 16;\n            break;\n        }\n        case 2: {\n            k1 ^= (key.charCodeAt(i + 1) & 0xff) << 8;\n            break;\n        }\n        case 1: {\n            k1 ^= key.charCodeAt(i) & 0xff;\n            break;\n        }\n    }\n\n    k1 = ((k1 & 0xffff) * c1 + ((((k1 >>> 16) * c1) & 0xffff) << 16)) & 0xffffffff;\n    k1 = (k1 << 15) | (k1 >>> 17);\n    k1 = ((k1 & 0xffff) * c2 + ((((k1 >>> 16) * c2) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= k1;\n\n    h1 ^= key.length;\n\n    h1 ^= h1 >>> 16;\n    h1 = ((h1 & 0xffff) * 0x85ebca6b + ((((h1 >>> 16) * 0x85ebca6b) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= h1 >>> 13;\n    h1 = ((h1 & 0xffff) * 0xc2b2ae35 + ((((h1 >>> 16) * 0xc2b2ae35) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= h1 >>> 16;\n\n    return h1 >>> 0;\n};\n\""
+      "length": 11818,
+      "value": "\"\nconst getBrowserFingerprint = async ({\n  debug = false\n} = {}) => {\n    const {\n        deviceMemory,\n        hardwareConcurrency,\n        maxTouchPoints,\n        platform,\n    } = window.navigator;\n\n    \/\/ we use screen info only on mobile, because on desktop the user may use multiple monitors\n    const enableScreen = \/Mobi|Android|iPhone|iPad|iPod\/i.test(navigator.userAgent);\n\n    const {\n        width,\n        height,\n        colorDepth,\n        pixelDepth\n    } = enableScreen ? window.screen : {}; \/\/ undefined will remove this from the stringify down here\n    const touchSupport = \"ontouchstart\" in window;\n    const devicePixelRatio = window.devicePixelRatio;\n\n    const canvas = getCanvasID();\n    const webgl = getWebglID();\n    const webglInfo = getWebglInfo();\n    const audioId = await getAudioID();\n    const audioInfo = getAudioInfo();\n    const fontsId = getFontsID();\n\n    const data = \n      {\n          audioId,\n          audioInfo,\n          fontsId,\n          canvas,\n          colorDepth,\n          deviceMemory,\n          devicePixelRatio,\n          hardwareConcurrency,\n          height,\n          maxTouchPoints,\n          pixelDepth,\n          platform,\n          touchSupport,\n          webgl,\n          webglInfo,\n          width,\n      };\n\n    const payload = JSON.stringify(data, null, 2);\n    return payload\n};\n\nconst getCanvasID = () => {\n    try {\n        const canvas = document.createElement(\"canvas\");\n        if (!canvas) {\n            return null;\n        }\n        \n        const ctx = canvas.getContext(\"2d\");\n        if (!ctx) {\n            return null;\n        }\n        \n        const text = \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~1!2@3#4$5%6^7&8*9(0)-_=+[{]}|;:',<.>\/?\";\n        ctx.textBaseline = \"top\";\n        ctx.font = \"14px 'Arial'\";\n        ctx.textBaseline = \"alphabetic\";\n        ctx.fillStyle = \"#f60\";\n        ctx.fillRect(125, 1, 62, 20);\n        ctx.fillStyle = \"#069\";\n        ctx.fillText(text, 2, 15);\n        ctx.fillStyle = \"rgba(102, 204, 0, 0.7)\";\n        ctx.fillText(text, 4, 17);\n\n        const result = canvas.toDataURL();\n\n        ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n        return murmurhash3_32_gc(result);\n    } catch (error) {\n        console.error('Canvas error:', error);\n        return null;\n    }\n};\n\nconst getWebglID = () => {\n    try {\n        const canvas = document.createElement(\"canvas\");\n        if (!canvas) {\n            return null;\n        }\n        \n        let ctx = canvas.getContext(\"webgl\");\n        if (!ctx) {\n            ctx = canvas.getContext(\"webgl2\");\n            if (!ctx) {\n                return null;\n            }\n        }\n        \n        canvas.width = 256;\n        canvas.height = 128;\n\n        const f =\n            \"attribute vec2 attrVertex;varying vec2 varyinTexCoordinate;uniform vec2 uniformOffset;void main(){varyinTexCoordinate=attrVertex+uniformOffset;gl_Position=vec4(attrVertex,0,1);}\";\n        const g = \"precision mediump float;varying vec2 varyinTexCoordinate;void main() {gl_FragColor=vec4(varyinTexCoordinate,0,1);}\";\n        const h = ctx.createBuffer();\n\n        ctx.bindBuffer(ctx.ARRAY_BUFFER, h);\n\n        const i = new Float32Array([-0.2, -0.9, 0, 0.4, -0.26, 0, 0, 0.7321, 0]);\n\n        ctx.bufferData(ctx.ARRAY_BUFFER, i, ctx.STATIC_DRAW);\n        h.itemSize = 3;\n        h.numItems = 3;\n\n        const j = ctx.createProgram();\n        const k = ctx.createShader(ctx.VERTEX_SHADER);\n\n        ctx.shaderSource(k, f);\n        ctx.compileShader(k);\n\n        const l = ctx.createShader(ctx.FRAGMENT_SHADER);\n\n        ctx.shaderSource(l, g);\n        ctx.compileShader(l);\n        ctx.attachShader(j, k);\n        ctx.attachShader(j, l);\n        ctx.linkProgram(j);\n        ctx.useProgram(j);\n\n        j.vertexPosAttrib = ctx.getAttribLocation(j, \"attrVertex\");\n        j.offsetUniform = ctx.getUniformLocation(j, \"uniformOffset\");\n\n        ctx.enableVertexAttribArray(j.vertexPosArray);\n        ctx.vertexAttribPointer(j.vertexPosAttrib, h.itemSize, ctx.FLOAT, !1, 0, 0);\n        ctx.uniform2f(j.offsetUniform, 1, 1);\n        ctx.drawArrays(ctx.TRIANGLE_STRIP, 0, h.numItems);\n\n        const n = new Uint8Array(canvas.width * canvas.height * 4);\n        ctx.readPixels(0, 0, canvas.width, canvas.height, ctx.RGBA, ctx.UNSIGNED_BYTE, n);\n\n        const result = JSON.stringify(n).replace(\/,?\"[0-9]+\":\/g, \"\");\n\n        ctx.clear(ctx.COLOR_BUFFER_BIT | ctx.DEPTH_BUFFER_BIT | ctx.STENCIL_BUFFER_BIT);\n\n        return murmurhash3_32_gc(result);\n    } catch (error) {\n        console.error('WebGL error:', error);\n        return null;\n    }\n};\n\nconst getWebglInfo = () => {\n    try {\n      const ctx = document.createElement(\"canvas\").getContext(\"webgl\");\n\n      const result = {\n          VERSION: String(ctx.getParameter(ctx.VERSION)),\n          SHADING_LANGUAGE_VERSION: String(ctx.getParameter(ctx.SHADING_LANGUAGE_VERSION)),\n          VENDOR: String(ctx.getParameter(ctx.VENDOR)),\n          SUPPORTED_EXTENSIONS: String(ctx.getSupportedExtensions()),\n      };\n\n      return result;\n    } catch {\n      return null;\n    }\n};\n\nconst getAudioInfo = () => {\n    try {\n      const OfflineAudioContext = window.OfflineAudioContext || window.webkitOfflineAudioContext;\n      const length = 44100;\n      const sampleRate = 44100;\n      const context = new OfflineAudioContext(1, length, sampleRate);\n  \n      const result = {\n        sampleRate: context.sampleRate,\n        channelCount: context.destination.maxChannelCount,\n        outputLatency: context.outputLatency,\n        state: context.state,\n        baseLatency: context.baseLatency,\n      };\n  \n      return result;\n    } catch {\n      return null;\n    }\n};\n\nconst getAudioID = async () => {\n    try {\n      const OfflineAudioContext = window.OfflineAudioContext || window.webkitOfflineAudioContext;\n      const sampleRate = 44100;\n      const length = 44100; \/\/ Number of samples (1 second of audio)\n      const context = new OfflineAudioContext(1, length, sampleRate);\n  \n      \/\/ Create an oscillator to generate sound\n      const oscillator = context.createOscillator();\n      oscillator.type = \"sine\";\n      oscillator.frequency.value = 440;\n  \n      oscillator.connect(context.destination);\n      oscillator.start();\n  \n      \/\/ Render the audio into a buffer\n      const renderedBuffer = await context.startRendering();\n      const channelData = renderedBuffer.getChannelData(0);\n  \n      \/\/ Generate fingerprint by summing the absolute values of the audio data\n      const result = channelData.reduce((acc, val) => acc + Math.abs(val), 0).toString();\n  \n      return murmurhash3_32_gc(result);\n    } catch {\n      return null;\n    }\n};\n\nconst getFontsID = () => {\n    try {\n        \/\/ Base fonts to compare against\n        const baseFonts = ['monospace', 'sans-serif', 'serif'];\n        \n        \/\/ A curated list of common fonts to reduce file size\n        const fontsToDetect = [\n            \/\/ Standard Fonts\n            'Arial', 'Arial Black', 'Arial Narrow', 'Calibri', 'Cambria', 'Cambria Math', 'Comic Sans MS',\n            'Consolas', 'Courier', 'Courier New', 'Georgia', 'Helvetica', 'Impact', 'Lucida Console',\n            'Lucida Sans Unicode', 'Microsoft Sans Serif', 'Palatino', 'Palatino Linotype', 'Segoe UI',\n            'Tahoma', 'Times', 'Times New Roman', 'Trebuchet MS', 'Verdana',\n\n            \/\/ Additional Windows Fonts\n            'Bahnschrift', 'Candara', 'Century Gothic', 'Franklin Gothic', 'Gadugi', 'Garamond',\n            'Leelawadee UI', 'MS Gothic', 'MS PGothic', 'MS Sans Serif', 'MS Serif', 'Segoe Print',\n            'Segoe Script', 'Segoe UI Light', 'Segoe UI Semibold', 'Symbol', 'Webdings', 'Wingdings',\n\n            \/\/ Additional Mac Fonts\n            'American Typewriter', 'Andale Mono', 'Apple Chancery', 'AppleGothic', 'AppleMyungjo',\n            'Arial Hebrew', 'Arial Rounded MT Bold', 'Avenir', 'Avenir Next', 'Baskerville',\n            'Big Caslon', 'Brush Script MT', 'Copperplate', 'Didot', 'Futura', 'Geneva', 'Gill Sans',\n            'Helvetica Neue', 'Hoefler Text', 'Lucida Grande', 'Menlo', 'Monaco', 'Optima',\n            'Palatino', 'Papyrus', 'Rockwell', 'Skia', 'Zapfino',\n\n            \/\/ Popular Web Fonts\n            'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Raleway', 'Ubuntu', 'Noto Sans',\n            'Source Sans Pro', 'Poppins', 'Oswald', 'Merriweather', 'Playfair Display',\n            'Fira Sans', 'PT Sans', 'Nunito', 'Work Sans', 'Quicksand', 'Rubik'\n        ];\n\n        \/\/ Create a hidden div for testing\n        const testDiv = document.createElement('div');\n        testDiv.style.position = 'absolute';\n        testDiv.style.left = '-9999px';\n        testDiv.style.visibility = 'hidden';\n        testDiv.style.fontSize = '72px';\n        document.body.appendChild(testDiv);\n\n        const getWidth = (fontFamily) => {\n            testDiv.style.fontFamily = fontFamily;\n            testDiv.textContent = 'mmmmmmmmmmlli'; \/\/ Test string\n            return testDiv.offsetWidth;\n        };\n\n        const availableFonts = [];\n\n        \/\/ Check each font\n        fontsToDetect.forEach(font => {\n            let detected = false;\n            \n            \/\/ Compare with each base font\n            for (let baseFont of baseFonts) {\n                \/\/ Get width with the test font first\n                const baseWidth = getWidth(`'${font}', ${baseFont}`);\n                const fallbackWidth = getWidth(baseFont);\n                \n                \/\/ If widths are different, the font is available\n                if (baseWidth !== fallbackWidth) {\n                    detected = true;\n                    break;\n                }\n            }\n            \n            if (detected) {\n                availableFonts.push(font);\n            }\n        });\n\n        \/\/ Clean up\n        document.body.removeChild(testDiv);\n        \n        \/\/ Sort fonts to ensure consistent ordering before hashing\n        availableFonts.sort();\n        \/\/ Convert array to string and hash it\n        return murmurhash3_32_gc(availableFonts.join(','));\n    } catch {\n        return null;\n    }\n};\n\nconst murmurhash3_32_gc = (key) => {\n    const remainder = key.length & 3; \/\/ key.length % 4\n    const bytes = key.length - remainder;\n    const c1 = 0xcc9e2d51;\n    const c2 = 0x1b873593;\n\n    let h1;\n    let h1b;\n    let k1;\n\n    for (let i = 0; i < bytes; i++) {\n      k1 = (key.charCodeAt(i) & 0xff) | ((key.charCodeAt(++i) & 0xff) << 8) | ((key.charCodeAt(++i) & 0xff) << 16) | ((key.charCodeAt(++i) & 0xff) << 24);\n      ++i;\n\n      k1 = ((k1 & 0xffff) * c1 + ((((k1 >>> 16) * c1) & 0xffff) << 16)) & 0xffffffff;\n      k1 = (k1 << 15) | (k1 >>> 17);\n      k1 = ((k1 & 0xffff) * c2 + ((((k1 >>> 16) * c2) & 0xffff) << 16)) & 0xffffffff;\n\n      h1 ^= k1;\n      h1 = (h1 << 13) | (h1 >>> 19);\n      h1b = ((h1 & 0xffff) * 5 + ((((h1 >>> 16) * 5) & 0xffff) << 16)) & 0xffffffff;\n      h1 = (h1b & 0xffff) + 0x6b64 + ((((h1b >>> 16) + 0xe654) & 0xffff) << 16);\n    }\n\n    const i = bytes - 1;\n\n    k1 = 0;\n\n    switch (remainder) {\n      case 3: {\n          k1 ^= (key.charCodeAt(i + 2) & 0xff) << 16;\n          break;\n      }\n      case 2: {\n          k1 ^= (key.charCodeAt(i + 1) & 0xff) << 8;\n          break;\n      }\n      case 1: {\n          k1 ^= key.charCodeAt(i) & 0xff;\n          break;\n      }\n    }\n\n    k1 = ((k1 & 0xffff) * c1 + ((((k1 >>> 16) * c1) & 0xffff) << 16)) & 0xffffffff;\n    k1 = (k1 << 15) | (k1 >>> 17);\n    k1 = ((k1 & 0xffff) * c2 + ((((k1 >>> 16) * c2) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= k1;\n\n    h1 ^= key.length;\n\n    h1 ^= h1 >>> 16;\n    h1 = ((h1 & 0xffff) * 0x85ebca6b + ((((h1 >>> 16) * 0x85ebca6b) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= h1 >>> 13;\n    h1 = ((h1 & 0xffff) * 0xc2b2ae35 + ((((h1 >>> 16) * 0xc2b2ae35) & 0xffff) << 16)) & 0xffffffff;\n    h1 ^= h1 >>> 16;\n\n    return h1 >>> 0;\n};\n\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Public\/UJConstants.swift",
@@ -1686,112 +1686,133 @@
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "StringLiteral",
-      "offset": 282,
+      "offset": 281,
       "length": 13,
       "value": "\"status_code\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "StringLiteral",
-      "offset": 504,
+      "offset": 493,
+      "length": 12,
+      "value": "\"token_data\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 529,
+      "length": 12,
+      "value": "\"tracker_js\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 665,
+      "length": 8,
+      "value": "\"js_str\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 843,
       "length": 14,
       "value": "\"access_token\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "StringLiteral",
-      "offset": 549,
+      "offset": 888,
       "length": 17,
       "value": "\"expiration_time\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "StringLiteral",
-      "offset": 728,
+      "offset": 1067,
       "length": 13,
       "value": "\"status_code\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1052,
+      "offset": 1391,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1122,
+      "offset": 1461,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1154,
+      "offset": 1493,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1177,
+      "offset": 1516,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1203,
+      "offset": 1542,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1254,
+      "offset": 1593,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1324,
+      "offset": 1663,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1356,
+      "offset": 1695,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1377,
+      "offset": 1716,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1404,
+      "offset": 1743,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1431,
+      "offset": 1770,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1460,
+      "offset": 1799,
       "length": 1,
       "value": "5"
     },
