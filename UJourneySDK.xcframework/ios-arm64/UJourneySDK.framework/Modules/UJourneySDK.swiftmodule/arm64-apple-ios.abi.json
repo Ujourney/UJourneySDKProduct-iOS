@@ -1735,91 +1735,98 @@
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "StringLiteral",
-      "offset": 1067,
+      "offset": 1092,
       "length": 13,
       "value": "\"status_code\""
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
+      "kind": "StringLiteral",
+      "offset": 1276,
+      "length": 10,
+      "value": "\"event_id\""
+    },
+    {
+      "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1391,
+      "offset": 1576,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1461,
+      "offset": 1646,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1493,
+      "offset": 1678,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1516,
+      "offset": 1701,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1542,
+      "offset": 1727,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1593,
+      "offset": 1778,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1663,
+      "offset": 1848,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1695,
+      "offset": 1880,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1716,
+      "offset": 1901,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1743,
+      "offset": 1928,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1770,
+      "offset": 1955,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/wangzhe101\/Documents\/GitHub\/UJourneySDKSource-iOS\/UJourneySDK\/UJourneySDK\/Private\/UJDataModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 1799,
+      "offset": 1984,
       "length": 1,
       "value": "5"
     },

@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		7RcPuY/ZF8H4gmL58mjQsrawnRg=
+		S45PRV2lRrX2aQA6vdxOtcKywmw=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vi0xDI2LeYoYqiu7yPP/08T8adM=
+		VnTj+i/1ipBb/DwNnlOA/Ub7jGM=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		7RcPuY/ZF8H4gmL58mjQsrawnRg=
+		S45PRV2lRrX2aQA6vdxOtcKywmw=
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pCcYf9yIiYMFAu+LhVljxzd5bZ4=
+		H9SLCDSf9WZRawAuPfHq/1U89oQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,11 +74,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7RcPuY/ZF8H4gmL58mjQsrawnRg=
+			S45PRV2lRrX2aQA6vdxOtcKywmw=
 			</data>
 			<key>hash2</key>
 			<data>
-			uZCJ6WHOCc3TKb+/CNj360F+26aCOogGl/Hsjb9ukHw=
+			X5VAHy7V+OiybyDqvGQEvEnmFEdfOCXFOZy4mo16irQ=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -118,22 +118,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vi0xDI2LeYoYqiu7yPP/08T8adM=
+			VnTj+i/1ipBb/DwNnlOA/Ub7jGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			6EQ4TK15ttQe9JU0aIDQQx1ItA6O/H8YwbYQpIi1iFw=
+			IjRkt42RqbhFxcGqUCV3kvh5pqGMYjFLgi/XtY4ekFw=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7RcPuY/ZF8H4gmL58mjQsrawnRg=
+			S45PRV2lRrX2aQA6vdxOtcKywmw=
 			</data>
 			<key>hash2</key>
 			<data>
-			uZCJ6WHOCc3TKb+/CNj360F+26aCOogGl/Hsjb9ukHw=
+			X5VAHy7V+OiybyDqvGQEvEnmFEdfOCXFOZy4mo16irQ=
 			</data>
 		</dict>
 		<key>Modules/UJourneySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -173,11 +173,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pCcYf9yIiYMFAu+LhVljxzd5bZ4=
+			H9SLCDSf9WZRawAuPfHq/1U89oQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ocOM+5dYCujo57y1692c4iEbXiwrW4x+iYx4ErbYCQM=
+			Xk1e8pAjaISO2a8O8Ru7LGvMc45o95cN/is59aXEhTs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
